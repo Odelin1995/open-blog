@@ -75,7 +75,8 @@ export const generateBlogMetadata = ({
   slug: string;
 }) => {
   const url = `${SITE_URL}blog/${slug}`;
-  const dateStr = date instanceof Date ? date.toISOString().split("T")[0] : date;
+  const dateStr =
+    date instanceof Date ? date.toISOString().split("T")[0] : date;
   const publishedTime = formatDate(dateStr, { month: "long" });
   const imageUrl = `${SITE_URL}og/blog/?title=${encodeURIComponent(title)}&top=${publishedTime}`;
 
