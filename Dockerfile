@@ -2,10 +2,16 @@ FROM node:24-alpine
 
 WORKDIR /app
 
-COPY . .
+COPY package.json pnpm-lock.yaml ./
 
 RUN corepack enable pnpm && pnpm install
 
-CMD ["pnpm", "dev"]
+COPY . .
+ 
+RUN pnpm build
+ 
+EXPOSE 3000                                                                                                                                                                                                                                                                                                                                                            
 
-EXPOSE 3000
+ENV PORT=3000                                                                                                                                                                                                                                                                                                                                                          
+
+CMD ["pnpm", "start"]    
