@@ -15,8 +15,9 @@ import {
 } from "@/config/site";
 import { clx } from "@/lib/utils";
 
-import Header from "../components/header";
 import Footer from "../components/footer";
+import SearchWrapper from "../components/search-wrapper";
+import { generateSearchData } from "@/lib/search";
 
 const titleTemplate = `%s | ${AUTHOR_NAME}`;
 const defaultTitle = `${SITE_NAME} — A blog by ${AUTHOR_NAME}`;
@@ -59,6 +60,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const searchData = generateSearchData();
+
   return (
     <ViewTransitions>
       <html
@@ -69,8 +72,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}
       >
         <body className="mx-auto flex min-h-dvh max-w-2xl flex-col bg-[--bg] px-5 py-12 text-[--text]">
-          <Header />
-          <main className="flex-grow">{children}</main>
+          <SearchWrapper searchData={searchData} />
+          <main className="grow">{children}</main>
           <Footer />
           <Analytics />
         </body>
